@@ -31,8 +31,8 @@ For this problem, I approached it by identifying the range in which the square r
 
 ## Time and Space Complexity
 
-The time complexity of the initial solution, where you're incrementing i one by one until i * i exceeds x, is indeed O(√x). This is because you're essentially searching for the square root by trying each integer value up to the square root of x.
-The space complexity is O(1) since you're only using a constant amount of extra space (the variable i).
+The time complexity of the initial solution, where you're incrementing **i** one by one until **i * i** exceeds **x**, is indeed **O(√x)**. This is because you're essentially searching for the square root by trying each integer value up to the square root of **x**.
+The space complexity is **O(1)** since you're only using a constant amount of extra space (the variable **i**).
 However, the time complexity can be improved by using a more efficient method ... (coming soon)
 
 🌟Thinking in this way is also useful for live coding practice. Because you're often asked how else it could be written. 
