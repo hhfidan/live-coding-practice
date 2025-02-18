@@ -41,21 +41,34 @@ For problems involving addition like this, I usually start by **reversing the nu
 Looking at the first two examples, the solution is straightforward:
   - Treat the array as a number(integer),
   - Reverse it,
-  - Add 1 to the first digit,
+  - Add `1` to the first digit,
   - Reverse it back to get the final result.
 
-However, the third example introduces a **carry-over** situation when the sum exceeds 9.
+However, the third example introduces a **carry-over** situation when the sum exceeds `9`.
   - In this case, we need to **check for carry-over** and handle it properly in the code.
-  - This follows the **besic addition logic** we learned in elementary school-when a digit reaches 10, we carry over 1 to the next position.
+  - This follows the **besic addition logic** we learned in elementary school-when a digit reaches `10`, we carry over `1` to the next position.
 
 Thinking simply often leads to faster solutions 😊
 
 ## Climbing Stairs Problem - Case Breakdown
 
-Let's try with [1,5,6,9]
+Let's try with `[1,5,6,9]`
 
-reverse it -> 9651
-add the carry to firs digit -> 9 + 1 = 10
-Check for carry-over ->Since 10 creates a carry (10 == 10), we continue propagating it.
+reverse it -> `9651`
+add the carry to firs digit -> `9 + 1 = 10`
+Check for carry-over ->Since 10 creates a carry `(10 == 10)`, we continue propagating it.
 if it is carry over we need to continue carry over when we come end of the integer we can just add the 1 to end of integer
 Then dont forget the reverse result, thats it!
+
+## Time and Space Complexity
+
+1. Reversing the list (digits.reverse()) -> O(n)
+2. Iterating through the list once -> O(n)
+3. Appending a carry if needed -> O(1)
+4. Reversing the list again -> O(n)
+
+Since the dominant term is **O(n) + O (n) + O(n) = O(n)**, the overall time complexity is **O(n)**.
+
+- The solution modifies the input list in place, using only a constant extra space **(O(1))**, except in the worst case, where we append one extra digit.
+- In the worst case, the space complexity is **O(n)** if we consider the additional digit.
+- As a result, the space complexity is **O(1)** in most cases, but **O(n)** in the worst case when extra space is needed.
