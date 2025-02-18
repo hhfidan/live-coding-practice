@@ -1,4 +1,4 @@
-# Climbing Stairs Problem
+# Plus One Problem
 
 ## Problem Description:
 
@@ -50,15 +50,15 @@ However, the third example introduces a **carry-over** situation when the sum ex
 
 Thinking simply often leads to faster solutions 😊
 
-## Climbing Stairs Problem - Case Breakdown
+## Plus One Problem - Case Breakdown
 
 Let's try with `[1,5,6,9]`
 
-reverse it -> `9651`
-add the carry to firs digit -> `9 + 1 = 10`
-Check for carry-over ->Since 10 creates a carry `(10 == 10)`, we continue propagating it.
-if it is carry over we need to continue carry over when we come end of the integer we can just add the 1 to end of integer
-Then dont forget the reverse result, thats it!
+- reverse it -> `9651`
+- Add the carry to firs digit -> `9 + 1 = 10`
+- Check for carry-over ->Since 10 creates a carry `(10 == 10)`, we continue propagating it.
+- If it is carry over we need to continue carry over when we come end of the integer we can just add the 1 to end of integer
+- Then dont forget the reverse result, thats it!
 
 ## Time and Space Complexity
 
